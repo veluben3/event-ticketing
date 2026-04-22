@@ -6,9 +6,11 @@ import EventDetailPage from './pages/EventDetail';
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
 import MyTicketsPage from './pages/MyTickets';
+import MyTicketDetailPage from './pages/MyTicketDetail';
 import CheckoutPage from './pages/Checkout';
 import CreateEventPage from './pages/CreateEvent';
 import OrganizerDashboardPage from './pages/OrganizerDashboard';
+import MyLocationsPage from './pages/MyLocations';
 
 export default function App() {
   return (
@@ -25,6 +27,22 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <MyTicketsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/my-tickets/:ticketId"
+            element={
+              <ProtectedRoute>
+                <MyTicketDetailPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/my-locations"
+            element={
+              <ProtectedRoute>
+                <MyLocationsPage />
               </ProtectedRoute>
             }
           />

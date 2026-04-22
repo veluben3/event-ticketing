@@ -17,11 +17,16 @@ export interface CreateEventInput {
   longitude?: number;
   startAt: string | Date;
   endAt: string | Date;
-  priceCents: number;
+  priceCents?: number;
   currency?: string;
   capacity: number;
   bannerUrl?: string;
   images?: string[];
+  ticketTypes: Array<{
+    name: string;
+    description?: string;
+    priceCents: number;
+  }>;
   status?: EventStatus;
 }
 
@@ -52,7 +57,11 @@ export const eventsService = {
       throw HttpError.validation('endAt must be after startAt');
     }
     if (input.capacity <= 0) throw HttpError.validation('capacity must be positive');
-    if (input.priceCents < 0) throw HttpError.validation('priceCents cannot be negative');
+    if (!input.ticketTypes.length) throw HttpError.validation('At least one ticket type is required');
+    if (input.ticketTypes.some((type) => type.priceCents < 0)) {
+      throw HttpError.validation('ticket type price cannot be negative');
+    }
+    const minPriceCents = Math.min(...input.ticketTypes.map((type) => type.priceCents));
 
     const event = await prisma.event.create({
       data: {
@@ -69,7 +78,7 @@ export const eventsService = {
         longitude: input.longitude,
         startAt: new Date(input.startAt),
         endAt: new Date(input.endAt),
-        priceCents: input.priceCents,
+        priceCents: input.priceCents ?? minPriceCents,
         currency: input.currency ?? 'INR',
         capacity: input.capacity,
         bannerUrl: input.bannerUrl,
@@ -77,8 +86,16 @@ export const eventsService = {
         images: input.images?.length
           ? { create: input.images.map((url, position) => ({ url, position })) }
           : undefined,
+        ticketTypes: {
+          create: input.ticketTypes.map((type, position) => ({
+            name: type.name,
+            description: type.description,
+            priceCents: type.priceCents,
+            position,
+          })),
+        },
       },
-      include: { images: true },
+      include: { images: true, ticketTypes: { orderBy: { position: 'asc' } } },
     });
     return event;
   },
@@ -108,7 +125,32 @@ export const eventsService = {
     if (patch.bannerUrl !== undefined) data.bannerUrl = patch.bannerUrl;
     if (patch.status !== undefined) data.status = patch.status;
 
-    const updated = await prisma.event.update({ where: { id: eventId }, data, include: { images: true } });
+    const updated = await prisma.$transaction(async (tx) => {
+      if (patch.ticketTypes) {
+        if (!patch.ticketTypes.length) {
+          throw HttpError.validation('At least one ticket type is required');
+        }
+        if (patch.ticketTypes.some((type) => type.priceCents < 0)) {
+          throw HttpError.validation('ticket type price cannot be negative');
+        }
+        await tx.eventTicketType.deleteMany({ where: { eventId } });
+        data.ticketTypes = {
+          create: patch.ticketTypes.map((type, position) => ({
+            name: type.name,
+            description: type.description,
+            priceCents: type.priceCents,
+            position,
+          })),
+        };
+        data.priceCents = Math.min(...patch.ticketTypes.map((type) => type.priceCents));
+      }
+
+      return tx.event.update({
+        where: { id: eventId },
+        data,
+        include: { images: true, ticketTypes: { orderBy: { position: 'asc' } } },
+      });
+    });
     await redis.del(redisKeys.eventDetail(eventId));
     return updated;
   },
@@ -120,6 +162,7 @@ export const eventsService = {
       where: { id: eventId },
       include: {
         images: { orderBy: { position: 'asc' } },
+        ticketTypes: { orderBy: { position: 'asc' } },
         organizer: { select: { id: true, name: true, companyName: true } },
       },
     });
@@ -164,7 +207,10 @@ export const eventsService = {
       prisma.event.count({ where }),
       prisma.event.findMany({
         where,
-        include: { images: { orderBy: { position: 'asc' }, take: 1 } },
+        include: {
+          images: { orderBy: { position: 'asc' }, take: 1 },
+          ticketTypes: { orderBy: { position: 'asc' } },
+        },
         orderBy: [{ startAt: 'asc' }],
         skip: (page - 1) * pageSize,
         take: pageSize,

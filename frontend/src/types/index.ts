@@ -28,6 +28,14 @@ export interface EventImage {
   position: number;
 }
 
+export interface EventTicketType {
+  id: string;
+  name: string;
+  description?: string | null;
+  priceCents: number;
+  position: number;
+}
+
 export interface EventDto {
   id: string;
   organizerId: string;
@@ -52,6 +60,7 @@ export interface EventDto {
   createdAt: string;
   updatedAt: string;
   images?: EventImage[];
+  ticketTypes?: EventTicketType[];
   organizer?: { id: string; name: string; companyName?: string | null };
 }
 
@@ -73,9 +82,24 @@ export interface TicketDto {
   status: TicketStatus;
   createdAt: string;
   event?: EventDto;
+  ticketType?: EventTicketType | null;
   payment?: {
     status: 'INITIATED' | 'SUCCEEDED' | 'FAILED' | 'REFUNDED';
     provider: string;
     providerRef?: string | null;
   };
+}
+
+export interface UserLocation {
+  id: string;
+  userId: string;
+  label: string;
+  addressLine?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country: string;
+  latitude: number;
+  longitude: number;
+  createdAt: string;
+  updatedAt: string;
 }

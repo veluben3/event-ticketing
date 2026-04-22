@@ -1,0 +1,114 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: event-ticketing-backend:crashfix1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 4000
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PORT
+              value: "4000"
+            - name: CORS_ORIGIN
+              value: http://localhost:3001,http://127.0.0.1:3001,http://localhost:30080,http://127.0.0.1:30080
+            - name: DATABASE_URL
+              value: postgresql://events:events@postgres:5432/events_manage?schema=public
+            - name: REDIS_URL
+              value: redis://redis:6379
+            - name: KAFKA_BROKERS
+              value: kafka:9092
+            - name: KAFKA_CLIENT_ID
+              value: events-manage-api
+            - name: KAFKA_CONSUMER_GROUP
+              value: events-manage-consumer
+            - name: JWT_ACCESS_SECRET
+              value: dev-access-secret
+            - name: JWT_REFRESH_SECRET
+              value: dev-refresh-secret
+            - name: JWT_ACCESS_TTL
+              value: 15m
+            - name: JWT_REFRESH_TTL
+              value: 7d
+            - name: SESSION_TTL_SECONDS
+              value: "604800"
+            - name: UPLOAD_DIR
+              value: ./uploads
+            - name: UPLOAD_MAX_BYTES
+              value: "5242880"
+            - name: PUBLIC_UPLOAD_PATH
+              value: /static
+            - name: RUN_CONSUMER
+              value: "true"
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 4000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 4000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 4000
+      targetPort: 4000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: event-ticketing-frontend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
+      nodePort: 30001

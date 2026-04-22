@@ -28,6 +28,16 @@ export interface LoginInput {
   userAgent?: string;
 }
 
+export interface UserLocationInput {
+  label: string;
+  addressLine?: string;
+  city?: string;
+  state?: string;
+  country?: string;
+  latitude: number;
+  longitude: number;
+}
+
 function toUserDto(u: {
   id: string;
   email: string;
@@ -41,6 +51,34 @@ function toUserDto(u: {
     name: u.name,
     role: u.role,
     companyName: u.companyName,
+  };
+}
+
+function toLocationDto(location: {
+  id: string;
+  userId: string;
+  label: string;
+  addressLine: string | null;
+  city: string | null;
+  state: string | null;
+  country: string;
+  latitude: number;
+  longitude: number;
+  createdAt: Date;
+  updatedAt: Date;
+}) {
+  return {
+    id: location.id,
+    userId: location.userId,
+    label: location.label,
+    addressLine: location.addressLine,
+    city: location.city,
+    state: location.state,
+    country: location.country,
+    latitude: location.latitude,
+    longitude: location.longitude,
+    createdAt: location.createdAt,
+    updatedAt: location.updatedAt,
   };
 }
 
@@ -95,7 +133,11 @@ export const authService = {
     const accessToken = signAccessToken({ sub: userId, sid: sessionId, role, email });
     const jti = uuid();
     const refreshToken = signRefreshToken({ sub: userId, sid: sessionId, jti });
-    await redis.set(redisKeys.refresh(jti), userId, 'EX', env.sessionTtlSeconds);
+    if (env.jwt.refreshTtl === 'never' || env.sessionTtlSeconds <= 0) {
+      await redis.set(redisKeys.refresh(jti), userId);
+    } else {
+      await redis.set(redisKeys.refresh(jti), userId, 'EX', env.sessionTtlSeconds);
+    }
     return { accessToken, refreshToken };
   },
 
@@ -126,5 +168,54 @@ export const authService = {
     const user = await prisma.user.findUnique({ where: { id: userId } });
     if (!user) throw HttpError.notFound('User not found');
     return toUserDto(user);
+  },
+
+  async listLocations(userId: string) {
+    const locations = await prisma.userLocation.findMany({
+      where: { userId },
+      orderBy: { createdAt: 'desc' },
+    });
+    return locations.map(toLocationDto);
+  },
+
+  async createLocation(userId: string, input: UserLocationInput) {
+    const location = await prisma.userLocation.create({
+      data: {
+        userId,
+        label: input.label,
+        addressLine: input.addressLine,
+        city: input.city,
+        state: input.state,
+        country: input.country ?? 'IN',
+        latitude: input.latitude,
+        longitude: input.longitude,
+      },
+    });
+    return toLocationDto(location);
+  },
+
+  async updateLocation(userId: string, locationId: string, input: Partial<UserLocationInput>) {
+    const existing = await prisma.userLocation.findUnique({ where: { id: locationId } });
+    if (!existing || existing.userId !== userId) throw HttpError.notFound('Location not found');
+
+    const updated = await prisma.userLocation.update({
+      where: { id: locationId },
+      data: {
+        label: input.label,
+        addressLine: input.addressLine,
+        city: input.city,
+        state: input.state,
+        country: input.country,
+        latitude: input.latitude,
+        longitude: input.longitude,
+      },
+    });
+    return toLocationDto(updated);
+  },
+
+  async deleteLocation(userId: string, locationId: string) {
+    const existing = await prisma.userLocation.findUnique({ where: { id: locationId } });
+    if (!existing || existing.userId !== userId) throw HttpError.notFound('Location not found');
+    await prisma.userLocation.delete({ where: { id: locationId } });
   },
 };

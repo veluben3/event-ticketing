@@ -59,6 +59,7 @@ model User {
 
   events  Event[]  @relation("OrganizerEvents")
   tickets Ticket[]
+  locations UserLocation[]
 
   @@index([role])
 }
@@ -90,6 +91,7 @@ model Event {
 
   tickets Ticket[]
   images  EventImage[]
+  ticketTypes EventTicketType[]
 
   @@index([city, startAt])
   @@index([category, startAt])
@@ -112,6 +114,8 @@ model Ticket {
   orderRef   String       @unique
   eventId    String
   event      Event        @relation(fields: [eventId], references: [id])
+  ticketTypeId String?
+  ticketType EventTicketType? @relation(fields: [ticketTypeId], references: [id])
   userId     String
   user       User         @relation(fields: [userId], references: [id])
   quantity   Int
@@ -126,6 +130,7 @@ model Ticket {
 
   @@index([userId, createdAt])
   @@index([eventId, status])
+  @@index([ticketTypeId])
 }
 
 model Payment {
@@ -140,4 +145,37 @@ model Payment {
   rawResponse  Json?
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
+}
+
+model EventTicketType {
+  id          String   @id @default(cuid())
+  eventId      String
+  event        Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  name         String
+  description  String?
+  priceCents   Int
+  position     Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  tickets Ticket[]
+
+  @@index([eventId, position])
+}
+
+model UserLocation {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  label       String
+  addressLine String?
+  city        String?
+  state       String?
+  country     String   @default("IN")
+  latitude    Float
+  longitude   Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId, createdAt])
 }

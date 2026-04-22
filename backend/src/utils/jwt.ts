@@ -16,12 +16,18 @@ export interface RefreshTokenClaims extends JwtPayload {
 }
 
 export function signAccessToken(claims: Omit<AccessTokenClaims, 'iat' | 'exp'>) {
-  const opts: SignOptions = { expiresIn: env.jwt.accessTtl as SignOptions['expiresIn'] };
+  const opts: SignOptions = {};
+  if (env.jwt.accessTtl !== 'never') {
+    opts.expiresIn = env.jwt.accessTtl as SignOptions['expiresIn'];
+  }
   return jwt.sign(claims, env.jwt.accessSecret, opts);
 }
 
 export function signRefreshToken(claims: Omit<RefreshTokenClaims, 'iat' | 'exp'>) {
-  const opts: SignOptions = { expiresIn: env.jwt.refreshTtl as SignOptions['expiresIn'] };
+  const opts: SignOptions = {};
+  if (env.jwt.refreshTtl !== 'never') {
+    opts.expiresIn = env.jwt.refreshTtl as SignOptions['expiresIn'];
+  }
   return jwt.sign(claims, env.jwt.refreshSecret, opts);
 }
 

@@ -17,11 +17,20 @@ const createSchema = z.object({
   longitude: z.number().min(-180).max(180).optional(),
   startAt: z.string().datetime(),
   endAt: z.string().datetime(),
-  priceCents: z.number().int().min(0),
   currency: z.string().length(3).optional(),
   capacity: z.number().int().positive(),
   bannerUrl: z.string().url().optional(),
   images: z.array(z.string().url()).max(10).optional(),
+  ticketTypes: z
+    .array(
+      z.object({
+        name: z.string().min(1).max(100),
+        description: z.string().max(500).optional(),
+        priceCents: z.number().int().min(0),
+      }),
+    )
+    .min(1)
+    .max(10),
   status: z.nativeEnum(EventStatus).optional(),
 });
 

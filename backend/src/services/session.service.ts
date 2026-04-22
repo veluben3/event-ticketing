@@ -26,7 +26,9 @@ export const sessionService = {
       userAgent: payload.userAgent ?? '',
       issuedAt: String(payload.issuedAt),
     });
-    pipe.expire(key, env.sessionTtlSeconds);
+    if (env.sessionTtlSeconds > 0) {
+      pipe.expire(key, env.sessionTtlSeconds);
+    }
     pipe.sadd(redisKeys.userSessions(payload.userId), sessionId);
     await pipe.exec();
     return sessionId;
@@ -46,7 +48,9 @@ export const sessionService = {
   },
 
   async touch(sessionId: string): Promise<void> {
-    await redis.expire(redisKeys.session(sessionId), env.sessionTtlSeconds);
+    if (env.sessionTtlSeconds > 0) {
+      await redis.expire(redisKeys.session(sessionId), env.sessionTtlSeconds);
+    }
   },
 
   async destroy(sessionId: string): Promise<void> {

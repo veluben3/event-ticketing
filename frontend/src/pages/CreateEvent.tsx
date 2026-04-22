@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { useMutation } from '@tanstack/react-query';
 import { eventsApi, uploadApi } from '../api/endpoints';
 import type { EventCategory } from '../types';
 
-const CATEGORIES: EventCategory[] = [
+const CATEGORIES = [
   'MUSIC',
   'SPORTS',
   'CONFERENCE',
@@ -16,22 +16,19 @@ const CATEGORIES: EventCategory[] = [
   'COMEDY',
   'WORKSHOP',
   'OTHER',
-];
+] as const satisfies readonly EventCategory[];
+
+const ticketTypeSchema = z.object({
+  name: z.string().min(1, 'Ticket type name is required'),
+  description: z.string().optional(),
+  priceRupees: z.coerce.number().int().min(0),
+});
 
 const schema = z
   .object({
     title: z.string().min(3),
     description: z.string().min(10),
-    category: z.enum([
-      'MUSIC',
-      'SPORTS',
-      'CONFERENCE',
-      'THEATRE',
-      'FESTIVAL',
-      'COMEDY',
-      'WORKSHOP',
-      'OTHER',
-    ]),
+    category: z.enum(CATEGORIES),
     venue: z.string().min(2),
     addressLine: z.string().optional(),
     city: z.string().min(2),
@@ -41,9 +38,9 @@ const schema = z
     longitude: z.coerce.number().optional(),
     startAt: z.string().min(1),
     endAt: z.string().min(1),
-    priceRupees: z.coerce.number().int().min(0),
     capacity: z.coerce.number().int().positive(),
     publish: z.boolean().default(true),
+    ticketTypes: z.array(ticketTypeSchema).min(1).max(10),
   })
   .refine((v) => new Date(v.endAt) > new Date(v.startAt), {
     path: ['endAt'],
@@ -59,12 +56,25 @@ export default function CreateEventPage() {
 
   const {
     register,
+    control,
     handleSubmit,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
-    defaultValues: { country: 'IN', publish: true },
+    defaultValues: {
+      country: 'IN',
+      publish: true,
+      ticketTypes: [{ name: 'General Admission', description: '', priceRupees: 999 }],
+    },
   });
+
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: 'ticketTypes',
+  });
+
+  const ticketTypes = watch('ticketTypes');
 
   const createMut = useMutation({
     mutationFn: async (values: FormValues) => {
@@ -81,8 +91,12 @@ export default function CreateEventPage() {
         longitude: values.longitude,
         startAt: new Date(values.startAt).toISOString(),
         endAt: new Date(values.endAt).toISOString(),
-        priceCents: Math.round(values.priceRupees * 100),
         capacity: values.capacity,
+        ticketTypes: values.ticketTypes.map((ticketType) => ({
+          name: ticketType.name,
+          description: ticketType.description,
+          priceCents: Math.round(ticketType.priceRupees * 100),
+        })),
         status: values.publish ? 'PUBLISHED' : 'DRAFT',
       });
 
@@ -99,9 +113,9 @@ export default function CreateEventPage() {
   });
 
   return (
-    <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8">
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
       <h1 className="text-2xl font-bold text-slate-900 mb-6">Create a new event</h1>
-      <form onSubmit={handleSubmit((v) => createMut.mutate(v))} className="card p-6 space-y-5" noValidate>
+      <form onSubmit={handleSubmit((v) => createMut.mutate(v))} className="card p-6 space-y-6" noValidate>
         <div>
           <label className="label">Title</label>
           <input className="input" placeholder="Summer Music Fest 2026" {...register('title')} />
@@ -110,14 +124,8 @@ export default function CreateEventPage() {
 
         <div>
           <label className="label">Description</label>
-          <textarea
-            className="input min-h-[120px]"
-            placeholder="What's this event about?"
-            {...register('description')}
-          />
-          {errors.description && (
-            <p className="text-xs text-red-600 mt-1">{errors.description.message}</p>
-          )}
+          <textarea className="input min-h-[120px]" placeholder="What's this event about?" {...register('description')} />
+          {errors.description && <p className="text-xs text-red-600 mt-1">{errors.description.message}</p>}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -153,21 +161,73 @@ export default function CreateEventPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="label">Ticket price (₹)</label>
-            <input type="number" min={0} className="input" placeholder="999" {...register('priceRupees')} />
-            {errors.priceRupees && (
-              <p className="text-xs text-red-600 mt-1">{errors.priceRupees.message}</p>
-            )}
+        <section className="rounded-xl border border-slate-200 p-4 space-y-4">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h2 className="text-lg font-semibold text-slate-900">Ticket types</h2>
+              <p className="text-sm text-slate-500">Add multiple ticket prices and explain who each ticket is for.</p>
+            </div>
+            <button
+              type="button"
+              className="btn-secondary"
+              onClick={() => append({ name: '', description: '', priceRupees: 0 })}
+              disabled={fields.length >= 10}
+            >
+              Add ticket type
+            </button>
           </div>
-          <div className="flex items-center gap-2 pt-7">
-            <input type="checkbox" id="publish" className="rounded" {...register('publish')} />
-            <label htmlFor="publish" className="text-sm text-slate-700">
-              Publish immediately (visible to users)
-            </label>
+
+          <div className="space-y-4">
+            {fields.map((field, index) => (
+              <div key={field.id} className="rounded-xl border border-slate-200 bg-slate-50/70 p-4 space-y-4">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="text-sm font-medium text-slate-900">Ticket type {index + 1}</div>
+                  {fields.length > 1 && (
+                    <button type="button" className="text-sm text-red-600 hover:text-red-700" onClick={() => remove(index)}>
+                      Remove
+                    </button>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="label">Name</label>
+                    <input className="input" placeholder="VIP" {...register(`ticketTypes.${index}.name`)} />
+                    {errors.ticketTypes?.[index]?.name && (
+                      <p className="text-xs text-red-600 mt-1">{errors.ticketTypes[index]?.name?.message}</p>
+                    )}
+                  </div>
+                  <div>
+                    <label className="label">Price (₹)</label>
+                    <input type="number" min={0} className="input" placeholder="1499" {...register(`ticketTypes.${index}.priceRupees`)} />
+                    {errors.ticketTypes?.[index]?.priceRupees && (
+                      <p className="text-xs text-red-600 mt-1">{errors.ticketTypes[index]?.priceRupees?.message}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="label">Conditions / details</label>
+                  <textarea
+                    className="input min-h-[88px]"
+                    placeholder="Example: Front-row access, complimentary drink, early entry"
+                    {...register(`ticketTypes.${index}.description`)}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
+
+          <div className="text-sm text-slate-600">
+            Starting from{' '}
+            <span className="font-semibold text-slate-900">
+              {Math.min(...ticketTypes.map((ticketType) => ticketType.priceRupees || 0)).toLocaleString('en-IN', {
+                style: 'currency',
+                currency: 'INR',
+              })}
+            </span>
+          </div>
+        </section>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -180,6 +240,11 @@ export default function CreateEventPage() {
             <input className="input" placeholder="Chennai" {...register('city')} />
             {errors.city && <p className="text-xs text-red-600 mt-1">{errors.city.message}</p>}
           </div>
+        </div>
+
+        <div>
+          <label className="label">Address line</label>
+          <input className="input" placeholder="Street, landmark, block number" {...register('addressLine')} />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -205,9 +270,14 @@ export default function CreateEventPage() {
             onChange={(e) => setBannerFile(e.target.files?.[0] ?? null)}
             className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-brand-50 file:text-brand-700 hover:file:bg-brand-100"
           />
-          <p className="text-xs text-slate-500 mt-1">
-            JPG/PNG/WEBP up to 5MB. Uploaded after the event is created.
-          </p>
+          <p className="text-xs text-slate-500 mt-1">JPG/PNG/WEBP up to 5MB. Uploaded after the event is created.</p>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <input type="checkbox" id="publish" className="rounded" {...register('publish')} />
+          <label htmlFor="publish" className="text-sm text-slate-700">
+            Publish immediately (visible to users)
+          </label>
         </div>
 
         {serverError && (

@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, ReactNode, useCallback } from 'react';
 import { authApi } from '../api/endpoints';
-import { setAccessToken } from '../api/client';
+import { ensureAccessToken, setAccessToken } from '../api/client';
 import type { User } from '../types';
 
 interface AuthContextValue {
@@ -26,9 +26,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const refreshProfile = useCallback(async () => {
     try {
+      await ensureAccessToken();
       const me = await authApi.me();
       setUser(me);
     } catch {
+      setAccessToken(null);
       setUser(null);
     }
   }, []);

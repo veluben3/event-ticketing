@@ -66,6 +66,7 @@ export default function CheckoutPage() {
 
         <dl className="text-sm divide-y divide-slate-200">
           <Row label="Event" value={data.event?.title ?? '—'} />
+          <Row label="Ticket type" value={data.ticketType?.name ?? 'General Admission'} />
           <Row label="Order reference" value={data.orderRef} />
           <Row label="Quantity" value={String(data.quantity)} />
           <Row

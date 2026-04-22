@@ -27,10 +27,10 @@ export const env = {
     accessSecret: required('JWT_ACCESS_SECRET', 'dev-access-secret'),
     refreshSecret: required('JWT_REFRESH_SECRET', 'dev-refresh-secret'),
     accessTtl: process.env.JWT_ACCESS_TTL ?? '15m',
-    refreshTtl: process.env.JWT_REFRESH_TTL ?? '7d',
+    refreshTtl: process.env.JWT_REFRESH_TTL ?? '10y',
   },
 
-  sessionTtlSeconds: Number(process.env.SESSION_TTL_SECONDS ?? 604800),
+  sessionTtlSeconds: Number(process.env.SESSION_TTL_SECONDS ?? 0),
 
   upload: {
     dir: path.resolve(process.env.UPLOAD_DIR ?? './uploads'),

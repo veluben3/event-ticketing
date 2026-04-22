@@ -1,5 +1,13 @@
 import { api } from './client';
-import type { EventDto, EventsListResponse, TicketDto, User, Role, EventCategory } from '../types';
+import type {
+  EventDto,
+  EventsListResponse,
+  TicketDto,
+  User,
+  Role,
+  EventCategory,
+  UserLocation,
+} from '../types';
 
 export const authApi = {
   register: (data: {
@@ -14,7 +22,17 @@ export const authApi = {
       .post<{ user: User; accessToken: string }>('/auth/login', data)
       .then((r) => r.data),
   logout: () => api.post('/auth/logout').then((r) => r.data),
+  refresh: () =>
+    api.post<{ accessToken: string }>('/auth/refresh').then((r) => r.data.accessToken),
   me: () => api.get<{ user: User }>('/auth/me').then((r) => r.data.user),
+  locations: () => api.get<{ items: UserLocation[] }>('/auth/locations').then((r) => r.data.items),
+  createLocation: (data: Omit<UserLocation, 'id' | 'userId' | 'createdAt' | 'updatedAt'>) =>
+    api.post<{ location: UserLocation }>('/auth/locations', data).then((r) => r.data.location),
+  updateLocation: (
+    id: string,
+    data: Partial<Omit<UserLocation, 'id' | 'userId' | 'createdAt' | 'updatedAt'>>,
+  ) => api.patch<{ location: UserLocation }>(`/auth/locations/${id}`, data).then((r) => r.data.location),
+  deleteLocation: (id: string) => api.delete(`/auth/locations/${id}`).then((r) => r.data),
 };
 
 export const eventsApi = {
@@ -28,7 +46,24 @@ export const eventsApi = {
     api.get<EventsListResponse>('/events', { params }).then((r) => r.data),
   cities: () => api.get<{ cities: string[] }>('/events/cities').then((r) => r.data.cities),
   get: (id: string) => api.get<{ event: EventDto }>(`/events/${id}`).then((r) => r.data.event),
-  create: (data: Partial<EventDto> & { startAt: string; endAt: string }) =>
+  create: (data: {
+    title: string;
+    description: string;
+    category: EventCategory;
+    venue: string;
+    addressLine?: string;
+    city: string;
+    state?: string;
+    country?: string;
+    latitude?: number;
+    longitude?: number;
+    startAt: string;
+    endAt: string;
+    capacity: number;
+    bannerUrl?: string;
+    status?: EventDto['status'];
+    ticketTypes: Array<{ name: string; description?: string; priceCents: number }>;
+  }) =>
     api.post<{ event: EventDto }>('/events', data).then((r) => r.data.event),
   update: (id: string, data: Partial<EventDto>) =>
     api.patch<{ event: EventDto }>(`/events/${id}`, data).then((r) => r.data.event),
@@ -37,7 +72,7 @@ export const eventsApi = {
 };
 
 export const ticketsApi = {
-  purchase: (data: { eventId: string; quantity: number }, idempotencyKey?: string) =>
+  purchase: (data: { eventId: string; ticketTypeId: string; quantity: number }, idempotencyKey?: string) =>
     api
       .post<{ ticket: TicketDto }>('/tickets/purchase', data, {
         headers: idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : undefined,

@@ -9,6 +9,7 @@ import { logger } from '../utils/logger';
 
 export interface PurchaseInput {
   eventId: string;
+  ticketTypeId: string;
   quantity: number;
   idempotencyKey?: string;
 }
@@ -30,22 +31,32 @@ export const ticketsService = {
       if (event.status !== EventStatus.PUBLISHED) {
         throw HttpError.badRequest('Event not available for purchase');
       }
+      const ticketType = await tx.eventTicketType.findFirst({
+        where: { id: input.ticketTypeId, eventId: input.eventId },
+      });
+      if (!ticketType) throw HttpError.notFound('Ticket type not found');
       if (event.ticketsSold + input.quantity > event.capacity) {
         throw HttpError.conflict('Not enough tickets available');
       }
 
-      const totalCents = event.priceCents * input.quantity;
+      const totalCents = ticketType.priceCents * input.quantity;
       const orderRef = `ORD-${Date.now()}-${uuid().slice(0, 8).toUpperCase()}`;
 
       const created = await tx.ticket.create({
         data: {
           orderRef,
           eventId: event.id,
+          ticketTypeId: ticketType.id,
           userId,
           quantity: input.quantity,
           totalCents,
           currency: event.currency,
           status: TicketStatus.PENDING,
+        },
+        include: {
+          event: { include: { ticketTypes: { orderBy: { position: 'asc' } } } },
+          payment: true,
+          ticketType: true,
         },
       });
 
@@ -101,7 +112,11 @@ export const ticketsService = {
       prisma.ticket.count({ where }),
       prisma.ticket.findMany({
         where,
-        include: { event: true, payment: true },
+        include: {
+          event: { include: { ticketTypes: { orderBy: { position: 'asc' } } } },
+          payment: true,
+          ticketType: true,
+        },
         orderBy: { createdAt: 'desc' },
         skip: (page - 1) * pageSize,
         take: pageSize,
@@ -113,7 +128,11 @@ export const ticketsService = {
   async getForUser(userId: string, ticketId: string) {
     const ticket = await prisma.ticket.findUnique({
       where: { id: ticketId },
-      include: { event: true, payment: true },
+      include: {
+        event: { include: { ticketTypes: { orderBy: { position: 'asc' } } } },
+        payment: true,
+        ticketType: true,
+      },
     });
     if (!ticket || ticket.userId !== userId) throw HttpError.notFound('Ticket not found');
     return ticket;
@@ -122,7 +141,11 @@ export const ticketsService = {
   async salesForOrganizer(organizerId: string) {
     const items = await prisma.ticket.findMany({
       where: { event: { organizerId } },
-      include: { event: { select: { id: true, title: true, startAt: true } }, user: { select: { id: true, email: true, name: true } } },
+      include: {
+        event: { select: { id: true, title: true, startAt: true } },
+        user: { select: { id: true, email: true, name: true } },
+        ticketType: true,
+      },
       orderBy: { createdAt: 'desc' },
       take: 200,
     });

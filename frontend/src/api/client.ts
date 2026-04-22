@@ -1,10 +1,20 @@
 import axios, { AxiosError, AxiosInstance, InternalAxiosRequestConfig } from 'axios';
 
-let accessToken: string | null = null;
+const ACCESS_TOKEN_STORAGE_KEY = 'eventhub.accessToken';
+
+let accessToken: string | null =
+  typeof window === 'undefined' ? null : window.localStorage.getItem(ACCESS_TOKEN_STORAGE_KEY);
 let refreshInFlight: Promise<string | null> | null = null;
 
 export const setAccessToken = (t: string | null) => {
   accessToken = t;
+  if (typeof window !== 'undefined') {
+    if (t) {
+      window.localStorage.setItem(ACCESS_TOKEN_STORAGE_KEY, t);
+    } else {
+      window.localStorage.removeItem(ACCESS_TOKEN_STORAGE_KEY);
+    }
+  }
 };
 export const getAccessToken = () => accessToken;
 
@@ -28,12 +38,20 @@ async function refreshAccess(): Promise<string | null> {
       {},
       { withCredentials: true },
     );
-    accessToken = data.accessToken;
-    return accessToken;
+    setAccessToken(data.accessToken);
+    return data.accessToken;
   } catch {
-    accessToken = null;
+    setAccessToken(null);
     return null;
   }
+}
+
+export async function ensureAccessToken(): Promise<string | null> {
+  if (accessToken) return accessToken;
+  refreshInFlight ??= refreshAccess().finally(() => {
+    refreshInFlight = null;
+  });
+  return refreshInFlight;
 }
 
 api.interceptors.response.use(

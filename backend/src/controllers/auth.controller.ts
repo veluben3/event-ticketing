@@ -4,7 +4,9 @@ import { Role } from '@prisma/client';
 import { authService } from '../services/auth.service';
 import { HttpError } from '../utils/httpError';
 import { slidingWindowAllow } from '../utils/rateLimiter';
-import { redisKeys } from '@/config/redis';
+import { redisKeys } from '../config/redis';
+
+const refreshCookieMaxAgeMs = 10 * 365 * 24 * 60 * 60 * 1000;
 
 const registerSchema = z.object({
   email: z.string().email(),
@@ -18,6 +20,18 @@ const loginSchema = z.object({
   email: z.string().email(),
   password: z.string().min(1),
 });
+
+const locationSchema = z.object({
+  label: z.string().min(1).max(120),
+  addressLine: z.string().max(300).optional(),
+  city: z.string().max(100).optional(),
+  state: z.string().max(100).optional(),
+  country: z.string().length(2).optional(),
+  latitude: z.number().min(-90).max(90),
+  longitude: z.number().min(-180).max(180),
+});
+
+const locationUpdateSchema = locationSchema.partial();
 
 export const authController = {
   async register(req: Request, res: Response) {
@@ -44,7 +58,7 @@ export const authController = {
       httpOnly: true,
       sameSite: 'lax',
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      maxAge: refreshCookieMaxAgeMs,
       path: '/auth',
     });
 
@@ -60,7 +74,7 @@ export const authController = {
       httpOnly: true,
       sameSite: 'lax',
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      maxAge: refreshCookieMaxAgeMs,
       path: '/auth',
     });
     res.json({ accessToken: tokens.accessToken });
@@ -76,5 +90,31 @@ export const authController = {
     if (!req.user) throw HttpError.unauthorized();
     const user = await authService.me(req.user.sub);
     res.json({ user });
+  },
+
+  async listLocations(req: Request, res: Response) {
+    if (!req.user) throw HttpError.unauthorized();
+    const items = await authService.listLocations(req.user.sub);
+    res.json({ items });
+  },
+
+  async createLocation(req: Request, res: Response) {
+    if (!req.user) throw HttpError.unauthorized();
+    const body = locationSchema.parse(req.body);
+    const location = await authService.createLocation(req.user.sub, body);
+    res.status(201).json({ location });
+  },
+
+  async updateLocation(req: Request, res: Response) {
+    if (!req.user) throw HttpError.unauthorized();
+    const body = locationUpdateSchema.parse(req.body);
+    const location = await authService.updateLocation(req.user.sub, req.params.id, body);
+    res.json({ location });
+  },
+
+  async deleteLocation(req: Request, res: Response) {
+    if (!req.user) throw HttpError.unauthorized();
+    await authService.deleteLocation(req.user.sub, req.params.id);
+    res.status(204).end();
   },
 };
