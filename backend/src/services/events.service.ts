@@ -3,6 +3,21 @@ import crypto from 'crypto';
 import { prisma } from '../config/prisma';
 import { redis, redisKeys } from '../config/redis';
 import { HttpError } from '../utils/httpError';
+import { aiSearchService } from './ai-search.service';
+
+const eventIndexingInclude = {
+  images: { orderBy: { position: 'asc' as const } },
+  ticketTypes: { orderBy: { position: 'asc' as const } },
+} satisfies Prisma.EventInclude;
+
+async function getIndexableEvent(eventId: string) {
+  const event = await prisma.event.findUnique({
+    where: { id: eventId },
+    include: eventIndexingInclude,
+  });
+  if (!event) return null;
+  return event;
+}
 
 export interface CreateEventInput {
   title: string;
@@ -95,8 +110,9 @@ export const eventsService = {
           })),
         },
       },
-      include: { images: true, ticketTypes: { orderBy: { position: 'asc' } } },
+      include: eventIndexingInclude,
     });
+    await aiSearchService.upsertEvent(event);
     return event;
   },
 
@@ -152,6 +168,7 @@ export const eventsService = {
       });
     });
     await redis.del(redisKeys.eventDetail(eventId));
+    await aiSearchService.upsertEvent(updated);
     return updated;
   },
 
@@ -244,6 +261,76 @@ export const eventsService = {
       await prisma.event.update({ where: { id: eventId }, data: { bannerUrl: url } });
     }
     await redis.del(redisKeys.eventDetail(eventId));
+    const indexedEvent = await getIndexableEvent(eventId);
+    if (indexedEvent) {
+      await aiSearchService.upsertEvent(indexedEvent);
+    }
     return image;
+  },
+
+  async semanticSearch(input: { q: string; city?: string; category?: EventCategory; topK?: number; lat?: number; lng?: number }) {
+    const response = await aiSearchService.search({
+      query: input.q,
+      city: input.city,
+      category: input.category,
+      topK: input.topK,
+      status: EventStatus.PUBLISHED,
+      latitude: input.lat,
+      longitude: input.lng,
+    });
+
+    return {
+      total: response.count,
+      answer: response.answer,
+      page: 1,
+      pageSize: input.topK ?? response.count,
+      items: (response.results as Array<Record<string, unknown>>).map((item) => ({
+        id: item.id,
+        organizerId: '',
+        title: item.title,
+        description: item.description,
+        category: item.category,
+        venue: item.venue,
+        addressLine: item.address_line,
+        city: item.city,
+        state: item.state,
+        country: item.country,
+        latitude: item.latitude,
+        longitude: item.longitude,
+        startAt: item.start_at,
+        endAt: item.end_at,
+        priceCents: item.price_cents,
+        currency: item.currency,
+        capacity: 0,
+        ticketsSold: 0,
+        bannerUrl: item.banner_url,
+        status: item.status,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        images: ((item.image_urls as string[] | undefined) ?? []).map((url, index) => ({
+          id: `${String(item.id)}-image-${index}`,
+          url,
+          position: index,
+        })),
+        ticketTypes: ((item.ticket_types as Array<Record<string, unknown>> | undefined) ?? []).map(
+          (ticketType, index) => ({
+            id: String(ticketType.id ?? `${String(item.id)}-ticket-${index}`),
+            name: String(ticketType.name ?? 'Ticket'),
+            description:
+              ticketType.description === null || ticketType.description === undefined
+                ? null
+                : String(ticketType.description),
+            priceCents: Number(ticketType.priceCents ?? item.price_cents ?? 0),
+            position: index,
+          }),
+        ),
+        score: Number(item.score ?? 0),
+        sentiment: String(item.sentiment ?? 'balanced'),
+        categorySummary: String(item.category_summary ?? ''),
+        semanticTags: ((item.semantic_tags as string[] | undefined) ?? []).map(String),
+        aiExplanation: item.ai_explanation ? String(item.ai_explanation) : undefined,
+        locationContext: item.location_context ? String(item.location_context) : undefined,
+      })),
+    };
   },
 };

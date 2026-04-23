@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import EventsListPage from './pages/EventsList';
+import SearchResultsPage from './pages/SearchResults';
 import EventDetailPage from './pages/EventDetail';
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
@@ -19,6 +20,7 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<EventsListPage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/events/:id" element={<EventDetailPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />

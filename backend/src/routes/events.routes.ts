@@ -8,6 +8,7 @@ const router = Router();
 
 // Public (B2C browsing)
 router.get('/', asyncHandler(eventsController.list));
+router.get('/semantic-search', asyncHandler(eventsController.semanticSearch));
 router.get('/cities', asyncHandler(eventsController.cities));
 router.get('/mine', requireAuth, requireRole(Role.ORGANIZER, Role.ADMIN), asyncHandler(eventsController.mine));
 router.get('/:id', asyncHandler(eventsController.get));

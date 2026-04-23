@@ -64,8 +64,18 @@ export interface EventDto {
   organizer?: { id: string; name: string; companyName?: string | null };
 }
 
+export interface AiSearchEventDto extends EventDto {
+  score: number;
+  sentiment: string;
+  categorySummary: string;
+  semanticTags: string[];
+  aiExplanation?: string;
+  locationContext?: string;
+}
+
 export interface EventsListResponse {
   total: number;
+  answer?: string;
   page: number;
   pageSize: number;
   items: EventDto[];

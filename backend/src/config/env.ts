@@ -13,6 +13,7 @@ export const env = {
   nodeEnv: process.env.NODE_ENV ?? 'development',
   port: Number(process.env.PORT ?? 4000),
   corsOrigin: process.env.CORS_ORIGIN ?? 'http://localhost:5173',
+  aiBackendUrl: process.env.AI_BACKEND_URL ?? 'http://localhost:8001',
 
   databaseUrl: required('DATABASE_URL'),
   redisUrl: required('REDIS_URL', 'redis://localhost:6379'),

@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "sectionId": "69a543d75724bd0012ccec46",
+      "sectionName": "She & Co\ud83c\udf80",
+      "layoutType": "fixedVerticalGrid",
+      "data": null,
+      "filterOptions": null,
+      "hasMore": false
+    }
+  ],
+  "message": "Events Sections Fetched Successfully",
+  "result": {
+    "code": 0,
+    "message": "Events Sections Fetched Successfully",
+    "additionalInfo": {}
+  }
+}

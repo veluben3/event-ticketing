@@ -1,0 +1,1717 @@
+[
+  {
+    "eventId": "69e5d3e2f36b3a8ca8f26354",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/447a5a90-9d57-47f7-a20b-66ad1c2c7361/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/abe202d7-7a60-47f1-8783-548fbd62a2e2/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/447a5a90-9d57-47f7-a20b-66ad1c2c7361/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/abe202d7-7a60-47f1-8783-548fbd62a2e2/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "VAMOS Weekend Run- Besant Nagar, Chennai",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Besant Nagar"
+        },
+        "venue": "Elliot's Promenade, Besant Nagar",
+        "locationUrl": "https://www.google.com/maps/search/?api=1&query=12.9992201,80.27286939999999&query_place_id=ChIJGxM3PYVnUjoRLBGvN-i7SJ4",
+        "locationTag": "Besant Nagar"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-04-26T00:30:00.000Z",
+    "endsAt": "2026-04-26T03:00:00.000Z",
+    "entryType": "free",
+    "price": 0,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69e5df58a411b51b54cbd4f2",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/bcddbb37-5881-4a35-9c55-b1099246560a/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/903cd45b-92f5-45b8-82e5-7bce1c30b21a/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/bcddbb37-5881-4a35-9c55-b1099246560a/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/903cd45b-92f5-45b8-82e5-7bce1c30b21a/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "VAMOS Weekend Run- Periyar Park, Vellore",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Balaji Nagar"
+        },
+        "venue": "Periyar Park, Vellore",
+        "locationUrl": "https://www.google.com/maps/search/?api=1&query=12.9167886,79.12842479999999&query_place_id=ChIJf0rtz8M4rTsRAD92ldUT1nE",
+        "locationTag": "Balaji Nagar"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-04-25T00:30:04.000Z",
+    "endsAt": "2026-04-25T03:00:04.000Z",
+    "entryType": "free",
+    "price": 0,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69b7bbcfaa86d6a1935d1c46",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/0f76a4da-a0c0-4ca6-8c34-ec44df2c8cc5/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/486e4c2f-e049-4e4c-be82-a67b14a2e059/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/0f76a4da-a0c0-4ca6-8c34-ec44df2c8cc5/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/486e4c2f-e049-4e4c-be82-a67b14a2e059/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "Father\u2019s Day Marathon 2026",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Besant Nagar"
+        },
+        "venue": "Olcott school",
+        "locationUrl": "https://share.google/XP8pSsk5T29ydS0fk",
+        "locationTag": "Besant Nagar"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-06-20T23:30:41.000Z",
+    "endsAt": "2026-06-21T02:00:41.000Z",
+    "entryType": "paidKyn",
+    "price": 499,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69b8e61f885a915fd7a0db37",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/9df40f76-20f7-4cb8-867f-40a8b004b123/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/950c2553-ffbc-4546-a190-64b2d56950e6/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/9df40f76-20f7-4cb8-867f-40a8b004b123/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/950c2553-ffbc-4546-a190-64b2d56950e6/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        },
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/3fb04328-ae7e-43ce-af84-14801674034f/medium",
+          "asset_order": 2,
+          "media_type": "image",
+          "meta_data": null
+        },
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/94aa6d8e-00f1-4281-a1b0-98fd4f57ea66/medium",
+          "asset_order": 3,
+          "media_type": "image",
+          "meta_data": null
+        },
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/b88aca9c-2ed1-4016-933a-bc72622a1f08/medium",
+          "asset_order": 4,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "VAMOS * KYN Chennai Half Marathon 2026",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Injambakkam"
+        },
+        "venue": "Akkarai Beach",
+        "locationUrl": "https://maps.google.com/?cid=18028759031158737708&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Injambakkam"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-12-12T23:30:09.000Z",
+    "endsAt": "2026-12-13T05:00:09.000Z",
+    "entryType": "paidKyn",
+    "price": 399,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69c1075639c69c5546808e19",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/7bac4511-d839-4493-9d24-23351ad571f8/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/b54d7e76-668f-4630-8347-7d453c307ef1/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/7bac4511-d839-4493-9d24-23351ad571f8/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/b54d7e76-668f-4630-8347-7d453c307ef1/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "Chennai Rise Up Run",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Ambattur Industrial Estate"
+        },
+        "venue": "Decathlon Sports - Nolambur",
+        "locationUrl": "https://maps.google.com/?cid=13003525321483013334&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Ambattur Industrial Estate"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-05-24T00:30:02.000Z",
+    "endsAt": "2026-05-24T02:15:02.000Z",
+    "entryType": "paidKyn",
+    "price": 299,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69c28f2438b1a3c41cb83860",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/a2c7de47-818a-43d2-bd06-04785a622d0f/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/c3d36df2-d1ef-4edf-8c0d-5b1e7f44fa71/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/a2c7de47-818a-43d2-bd06-04785a622d0f/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/c3d36df2-d1ef-4edf-8c0d-5b1e7f44fa71/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "LITTLE CHAMPS KIDS RUN \u2013 5TH EDITION",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Nehru Park"
+        },
+        "venue": "NEHRU PARK Sports Development Authority of Tamilnadu",
+        "locationUrl": "https://maps.google.com/?cid=8387846588370336324&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Nehru Park"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-05-31T02:00:15.000Z",
+    "endsAt": "2026-05-31T06:00:15.000Z",
+    "entryType": "paidKyn",
+    "price": 500,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69cbaf25422de76215a4bead",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/2de3143b-3fae-44af-a5b9-d7879eb1b9f4/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/accce8e8-e92c-437b-aab3-23dca95916c8/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/2de3143b-3fae-44af-a5b9-d7879eb1b9f4/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/accce8e8-e92c-437b-aab3-23dca95916c8/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "Mommathon 2026",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Anna Nagar"
+        },
+        "venue": "Tower Park",
+        "locationUrl": "https://maps.google.com/?cid=15087934569699719526&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Anna Nagar"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-05-09T22:30:58.000Z",
+    "endsAt": "2026-05-10T02:30:58.000Z",
+    "entryType": "paidKyn",
+    "price": 449,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69ce088b826f83e3c4c7b563",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ec656bda-b711-418d-875a-5d7f0ffce2c7/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ec4d6dea-2dc0-450e-becd-91e9c965fd7b/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ec656bda-b711-418d-875a-5d7f0ffce2c7/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ec4d6dea-2dc0-450e-becd-91e9c965fd7b/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "Chennai Miles for Makers - Mass Marathon",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Vandalur"
+        },
+        "venue": "B. S. Abdur Rahman Crescent Institute Of Science And Technology",
+        "locationUrl": "https://maps.google.com/?cid=1979480003393695160&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Vandalur"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-05-01T00:30:08.000Z",
+    "endsAt": "2026-05-01T02:30:08.000Z",
+    "entryType": "paidKyn",
+    "price": 299,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69cf8dc5826f83e3c4c7b581",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/e6509b90-e9db-4753-af42-e72c10c44165/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/498144e1-d155-4d7c-b4dd-44bd2e100818/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/e6509b90-e9db-4753-af42-e72c10c44165/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/498144e1-d155-4d7c-b4dd-44bd2e100818/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "CHENNAI KIDATHON 2026",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Nehru Park"
+        },
+        "venue": "NEHRU PARK Sports Development Authority of Tamilnadu",
+        "locationUrl": "https://maps.google.com/?cid=8387846588370336324&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Nehru Park"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-08-02T01:30:14.000Z",
+    "endsAt": "2026-08-02T06:30:14.000Z",
+    "entryType": "paidKyn",
+    "price": 550,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69cfa2b9826f83e3c4c7b586",
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/c5081fbb-6cb8-4280-a25b-4942ca1a489d/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/f37ad984-df0e-4a1e-b2cc-af51248b30a4/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/c5081fbb-6cb8-4280-a25b-4942ca1a489d/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/f37ad984-df0e-4a1e-b2cc-af51248b30a4/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "name": "Namma Bessy Run 2026",
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Besant Nagar"
+        },
+        "venue": "Olcott Memorial Higher Secondary School",
+        "locationUrl": "https://maps.google.com/?cid=11980308925304198523&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Besant Nagar"
+      }
+    ],
+    "type": "offline",
+    "category": "sports",
+    "isOngoing": false,
+    "startsAt": "2026-08-08T23:30:00.000Z",
+    "endsAt": "2026-08-09T02:30:00.000Z",
+    "entryType": "paidKyn",
+    "price": 600,
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "preBookingPhase": "completed",
+    "registrationPhase": "completed",
+    "bookingPhase": "completed",
+    "isMultipleLocations": false,
+    "isMultipleSlots": false,
+    "requestStatus": "",
+    "isExpired": false,
+    "eventCategory": "",
+    "registrationConfig": {},
+    "isQuestionsAvailable": false
+  },
+  {
+    "eventId": "69c9270931863fb92b25c8da",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/2c28263e-7775-402d-ad62-4694dca49b8e/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/e9b8e141-e42c-4da9-95d8-424f381f1460/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/2c28263e-7775-402d-ad62-4694dca49b8e/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/e9b8e141-e42c-4da9-95d8-424f381f1460/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "VGP Wonder Ice Rink - Summer Camp 2026",
+    "category": "kids",
+    "secondaryCategory": [],
+    "venue": "VGP Ice Rink",
+    "location": {
+      "key": "",
+      "value": "Injambakkam"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-01T04:30:03.000Z",
+    "endDate": "2026-05-31T05:30:03.000Z",
+    "startsAt": "2026-04-01T04:30:03.000Z",
+    "endsAt": "2026-05-31T05:30:03.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 11799,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Injambakkam"
+        },
+        "venue": "VGP Ice Rink",
+        "locationUrl": "https://maps.google.com/?cid=5877404120014329124&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Injambakkam"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": true,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-01T04:30:03.000Z",
+      "bookingEndsAt": "2026-05-31T05:30:03.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69b3b42ed16ad12ba65c88b5",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/3e872c0b-0cbc-4468-ae36-8751c9e7b7f6/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/7071e34f-72d0-49c0-aa41-38f49560a3d4/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/3e872c0b-0cbc-4468-ae36-8751c9e7b7f6/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/7071e34f-72d0-49c0-aa41-38f49560a3d4/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "10-Day Summer Camp for Kids \u2600\ufe0f",
+    "category": "kids",
+    "secondaryCategory": [],
+    "venue": "Happy Hearts",
+    "location": {
+      "key": "",
+      "value": "Perungudi"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-18T04:00:03.000Z",
+    "endDate": "2026-04-30T07:00:03.000Z",
+    "startsAt": "2026-04-18T04:00:03.000Z",
+    "endsAt": "2026-04-30T07:00:03.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 5000,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Perungudi"
+        },
+        "venue": "Happy Hearts",
+        "locationUrl": "https://maps.app.goo.gl/Nt1cDehSHdH2qLu6A",
+        "locationTag": "Perungudi"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": true,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-03-16T04:00:46.000Z",
+      "bookingEndsAt": "2026-04-25T07:00:03.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69c287d339c69c5546808e4c",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/65d007e1-80ad-4392-8941-6c8b3398c26c/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/dbaad0a4-d19c-4b4e-a943-1cc58e23fbb1/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/65d007e1-80ad-4392-8941-6c8b3398c26c/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/dbaad0a4-d19c-4b4e-a943-1cc58e23fbb1/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "Kids Summer Camp",
+    "category": "kids",
+    "secondaryCategory": [],
+    "venue": "IDAM - The Art & Cultural Space | An initiative by Theatre Akku",
+    "location": {
+      "key": "",
+      "value": "Kodambakkam"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-20T04:30:15.000Z",
+    "endDate": "2026-05-01T07:30:15.000Z",
+    "startsAt": "2026-04-20T04:30:15.000Z",
+    "endsAt": "2026-05-01T07:30:15.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 6500,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Kodambakkam"
+        },
+        "venue": "IDAM - The Art & Cultural Space | An initiative by Theatre Akku",
+        "locationUrl": "https://maps.google.com/?cid=16165578346038901985&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Kodambakkam"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": true,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-20T04:30:15.000Z",
+      "bookingEndsAt": "2026-05-01T07:30:15.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69c242bf38b1a3c41cb8289a",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/eee92202-1610-432a-8b6b-56d178302ef5/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/eea659a0-fe9f-4c38-a799-dbe718fc501b/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/eee92202-1610-432a-8b6b-56d178302ef5/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/eea659a0-fe9f-4c38-a799-dbe718fc501b/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "VGP Wonder Ice Rink",
+    "category": "experiences",
+    "secondaryCategory": [],
+    "venue": "VGP Ice Rink",
+    "location": {
+      "key": "",
+      "value": "Injambakkam"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-23T08:30:24.000Z",
+    "endDate": "2026-06-30T16:15:28.000Z",
+    "startsAt": "2026-04-23T08:30:24.000Z",
+    "endsAt": "2026-06-30T16:15:28.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 236,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Injambakkam"
+        },
+        "venue": "VGP Ice Rink",
+        "locationUrl": "https://maps.google.com/?cid=5877404120014329124&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Injambakkam"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": true,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": true,
+      "emailAttachments": [],
+      "liveBookingEnabled": true,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-01T05:30:58.000Z",
+      "bookingEndsAt": "2026-06-30T16:15:28.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69bd19c439c69c5546808a7e",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/a6fda7f8-3aed-4900-b1d7-26f8b96e1747/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/f747be0e-cf57-422e-8f48-5c71334a3cc6/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/a6fda7f8-3aed-4900-b1d7-26f8b96e1747/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/f747be0e-cf57-422e-8f48-5c71334a3cc6/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "Go Xtreme Adventures - Paintball",
+    "category": "experiences",
+    "secondaryCategory": [],
+    "venue": "Go Xtreme Adventures",
+    "location": {
+      "key": "",
+      "value": "Uthandi"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-23T08:30:25.000Z",
+    "endDate": "2026-05-03T14:30:34.000Z",
+    "startsAt": "2026-04-23T08:30:25.000Z",
+    "endsAt": "2026-05-03T14:30:34.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 480,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Uthandi"
+        },
+        "venue": "Go Xtreme Adventures",
+        "locationUrl": "https://maps.google.com/?cid=12072919549256699858&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Uthandi"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": false,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-03-21T03:30:55.000Z",
+      "bookingEndsAt": "2026-05-03T14:30:34.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69ca2802422de76215a4b5da",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/fdd20872-2ebf-4038-baf8-f080e7445d68/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/62fcf183-0d97-4534-8265-6791bc7ec67a/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/fdd20872-2ebf-4038-baf8-f080e7445d68/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/62fcf183-0d97-4534-8265-6791bc7ec67a/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "Indoor Rock Climbing | Fitrock Arena",
+    "category": "experiences",
+    "secondaryCategory": [],
+    "venue": "",
+    "location": null,
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-23T08:30:56.000Z",
+    "endDate": "2026-05-31T14:30:22.000Z",
+    "startsAt": "2026-04-23T08:30:56.000Z",
+    "endsAt": "2026-05-31T14:30:22.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 700,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": true,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Pallikaranai"
+        },
+        "venue": "",
+        "locationUrl": "",
+        "locationTag": "Multiple Venues"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": false,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-01T00:30:08.000Z",
+      "bookingEndsAt": "2026-05-31T14:30:22.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69d346cd9e1920ddf0f8bb97",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/6c18c2d6-1f9e-455c-8b76-76aa9e8d438a/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/af657da7-b5e8-47cc-b114-4b3ca47aab7f/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/6c18c2d6-1f9e-455c-8b76-76aa9e8d438a/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/af657da7-b5e8-47cc-b114-4b3ca47aab7f/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "Pickleball Court",
+    "category": "sports",
+    "secondaryCategory": [],
+    "venue": "DropShot courts",
+    "location": {
+      "key": "",
+      "value": "Semmancheri"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-23T09:30:09.000Z",
+    "endDate": "2026-05-31T17:30:27.000Z",
+    "startsAt": "2026-04-23T09:30:09.000Z",
+    "endsAt": "2026-05-31T17:30:27.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 600,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Semmancheri"
+        },
+        "venue": "DropShot courts",
+        "locationUrl": "https://maps.google.com/?cid=10971914796518337512&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Semmancheri"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": false,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-06T09:30:58.605Z",
+      "bookingEndsAt": "2026-05-31T17:30:27.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69ccac481f6f7040c26ba9f3",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ea8437ef-f05f-46d1-85e6-9f1691ad1105/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/d6257cec-63b7-42ff-908d-d17c33fd82fe/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ea8437ef-f05f-46d1-85e6-9f1691ad1105/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/d6257cec-63b7-42ff-908d-d17c33fd82fe/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "Madras Mini Golf",
+    "category": "experiences",
+    "secondaryCategory": [],
+    "venue": "Madras Mini Golf",
+    "location": {
+      "key": "",
+      "value": "Adyar"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-23T09:30:22.862Z",
+    "endDate": "2026-05-31T16:30:08.000Z",
+    "startsAt": "2026-04-23T09:30:22.862Z",
+    "endsAt": "2026-05-31T16:30:08.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "paidKyn",
+    "price": 499,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Adyar"
+        },
+        "venue": "Madras Mini Golf",
+        "locationUrl": "https://maps.google.com/?cid=17702071456481202556&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "Adyar"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": false,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-01T09:30:22.862Z",
+      "bookingEndsAt": "2026-05-31T16:30:08.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69e74f495918b74b8a5ebe46",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/51583087-5642-47e7-a07f-8a40115c8517/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/a2a51f3b-ac8b-4326-8faf-d707e8f8444f/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/51583087-5642-47e7-a07f-8a40115c8517/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/a2a51f3b-ac8b-4326-8faf-d707e8f8444f/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "Catch the Match live at Island Ground",
+    "category": "sports",
+    "secondaryCategory": [],
+    "venue": "Anna Salai, Mount Road, Chennai",
+    "location": {
+      "key": "",
+      "value": "Mount Road"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-23T14:00:42.000Z",
+    "endDate": "2026-05-24T17:00:42.000Z",
+    "startsAt": "2026-04-23T14:00:42.000Z",
+    "endsAt": "2026-05-24T17:00:42.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "free",
+    "price": 0,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "Mount Road"
+        },
+        "venue": "Anna Salai, Mount Road, Chennai",
+        "locationUrl": "https://www.google.com/maps/search/?api=1&query=13.0689707,80.272205&query_place_id=EklBbm5hIFNhbGFpLCBNb3VudCBSb2FkLCBUaGUgSXNsYW5kLCBQYXJrIFRvd24sIENoZW5uYWksIFRhbWlsIE5hZHUsIEluZGlhIi4qLAoUChIJMd13yUdmUjoRpJdxEAXrLmUSFAoSCV8-4qMcZlI6EQ-troXmdORt",
+        "locationTag": "Mount Road"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": false,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": false,
+      "emailAttachments": [],
+      "liveBookingEnabled": false,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-21T14:00:42.000Z",
+      "bookingEndsAt": "2026-05-24T17:00:42.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  },
+  {
+    "eventId": "69cba05431863fb92b25c9f5",
+    "bankDetails": null,
+    "isMarketingService": false,
+    "contactNumber": null,
+    "eventImages": {
+      "thumbnailUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/b4fb2e46-08ed-467d-95a0-b777484123d1/medium"
+      ],
+      "bannerUrl": [
+        "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ba67311d-6e47-4ba1-92c7-07d8f658c450/medium"
+      ]
+    },
+    "eventAssets": {
+      "thumbnail": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/b4fb2e46-08ed-467d-95a0-b777484123d1/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ],
+      "banner": [
+        {
+          "processed_url": "https://imagedelivery.net/oFFEDoHcGTJv79dAzs2bww/prod/ba67311d-6e47-4ba1-92c7-07d8f658c450/medium",
+          "asset_order": 1,
+          "media_type": "image",
+          "meta_data": null
+        }
+      ]
+    },
+    "soldOut": null,
+    "name": "Kiz-Ba Dance night",
+    "category": "stageworks",
+    "secondaryCategory": [],
+    "venue": "THE NEIGHBORHOOD BAR - 600017",
+    "location": {
+      "key": "",
+      "value": "T. Nagar"
+    },
+    "type": "offline",
+    "description": "",
+    "startDate": "2026-04-23T14:30:27.000Z",
+    "endDate": "2026-04-30T18:00:51.000Z",
+    "startsAt": "2026-04-23T14:30:27.000Z",
+    "endsAt": "2026-04-30T18:00:51.000Z",
+    "termsAndConditions": "",
+    "minAge": null,
+    "entryType": "mixed",
+    "price": null,
+    "externalUrl": "",
+    "availableSeats": null,
+    "locationUrl": "",
+    "userId": "",
+    "organizerId": "",
+    "requestStatusReason": "",
+    "requestStatus": "",
+    "eventStatus": "",
+    "modifiedBy": "",
+    "isUpcoming": null,
+    "isExpired": null,
+    "gstNumber": "",
+    "gst": null,
+    "createdAt": "",
+    "updatedAt": "",
+    "isPromoted": false,
+    "promotedDetails": {},
+    "isMultipleSlots": false,
+    "isMultipleLocations": false,
+    "locations": [
+      {
+        "location": {
+          "key": "",
+          "value": "T. Nagar"
+        },
+        "venue": "THE NEIGHBORHOOD BAR - 600017",
+        "locationUrl": "https://maps.google.com/?cid=1892593400800934727&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+        "locationTag": "T. Nagar"
+      }
+    ],
+    "eventQuestions": null,
+    "isMultiTicketTypeBooking": true,
+    "eventCommission": null,
+    "questionConfig": null,
+    "serviceFee": null,
+    "bookingConfig": {
+      "isEmailRequired": true,
+      "isQrRequired": true,
+      "isMultiTicketTypeBooking": true,
+      "emailAttachments": [],
+      "liveBookingEnabled": true,
+      "isRedirectToBookingConfirmation": false,
+      "isTicketPdfRequired": true,
+      "hasCmrlQr": false,
+      "hasCompPass": false,
+      "enableWhatsappNotification": false,
+      "bookingStartsAt": "2026-04-02T14:30:57.000Z",
+      "bookingEndsAt": "2026-04-30T18:00:51.000Z"
+    },
+    "registrationConfig": null,
+    "faqs": null,
+    "spaceId": "",
+    "isVisible": true,
+    "isSplitPaymentEnabled": false,
+    "splitPaymentConfig": null,
+    "userRole": "",
+    "seo": null
+  }
+]

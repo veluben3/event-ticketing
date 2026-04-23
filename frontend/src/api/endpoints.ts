@@ -3,6 +3,7 @@ import type {
   EventDto,
   EventsListResponse,
   TicketDto,
+  AiSearchEventDto,
   User,
   Role,
   EventCategory,
@@ -44,6 +45,17 @@ export const eventsApi = {
     pageSize?: number;
   }) =>
     api.get<EventsListResponse>('/events', { params }).then((r) => r.data),
+  semanticSearch: (params: {
+    q: string;
+    city?: string;
+    category?: EventCategory;
+    topK?: number;
+    lat?: number;
+    lng?: number;
+  }) =>
+    api
+      .get<{ items: AiSearchEventDto[]; total: number; page: number; pageSize: number; answer?: string }>('/events/semantic-search', { params })
+      .then((r) => r.data),
   cities: () => api.get<{ cities: string[] }>('/events/cities').then((r) => r.data.cities),
   get: (id: string) => api.get<{ event: EventDto }>(`/events/${id}`).then((r) => r.data.event),
   create: (data: {

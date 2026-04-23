@@ -11,6 +11,7 @@ A full-stack SaaS platform for discovering and hosting events.
 |------------|------|
 | Frontend   | React 18, Vite, TypeScript, Tailwind CSS, React Router, react-query, react-hook-form + Zod |
 | Backend    | Node.js 20, Express 4, TypeScript, Prisma, Zod, Pino |
+| AI Backend | Python 3.11, FastAPI, LangChain, Qdrant |
 | Database   | Postgres 16 |
 | Cache/Sess | Redis 7 (sessions, cache, rate-limit, idempotency) |
 | Messaging  | Kafka (kafkajs) — `payment.initiated` → `payment.result` → `ticket.confirmed` |
@@ -21,7 +22,8 @@ A full-stack SaaS platform for discovering and hosting events.
 
 ```
 events-manage/
-├── .skills/               # Agent SKILL.md files (nodejs, postgres, redis, reactjs)
+├── .skills/               # Agent SKILL.md files (reactjs, python, fastapi, langchain, etc.)
+├── AI-backend/            # FastAPI + LangChain + Qdrant semantic search service
 ├── backend/               # Express + Prisma + Kafka + Redis API
 │   ├── prisma/
 │   │   ├── schema.prisma

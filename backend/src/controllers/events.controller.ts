@@ -37,8 +37,14 @@ const createSchema = z.object({
 const updateSchema = createSchema.partial();
 
 const listSchema = z.object({
-  city: z.string().optional(),
-  category: z.nativeEnum(EventCategory).optional(),
+  city: z.preprocess(
+    (v) => (v === '' || v === null || v === 'undefined' ? undefined : v),
+    z.string().optional(),
+  ),
+  category: z.preprocess(
+    (v) => (v === '' || v === null || v === 'undefined' ? undefined : v),
+    z.nativeEnum(EventCategory).optional(),
+  ),
   q: z.string().optional(),
   fromDate: z.string().optional(),
   toDate: z.string().optional(),
@@ -46,6 +52,21 @@ const listSchema = z.object({
   pageSize: z.coerce.number().int().positive().max(50).optional(),
   status: z.nativeEnum(EventStatus).optional(),
   organizerId: z.string().optional(),
+});
+
+const aiSearchSchema = z.object({
+  q: z.string().min(1),
+  city: z.preprocess(
+    (v) => (v === '' || v === null || v === 'undefined' ? undefined : v),
+    z.string().optional(),
+  ),
+  category: z.preprocess(
+    (v) => (v === '' || v === null || v === 'undefined' ? undefined : v),
+    z.nativeEnum(EventCategory).optional(),
+  ),
+  topK: z.coerce.number().int().positive().max(24).optional(),
+  lat: z.coerce.number().optional(),
+  lng: z.coerce.number().optional(),
 });
 
 export const eventsController = {
@@ -66,6 +87,12 @@ export const eventsController = {
   async list(req: Request, res: Response) {
     const query = listSchema.parse(req.query);
     const result = await eventsService.list(query);
+    res.json(result);
+  },
+
+  async semanticSearch(req: Request, res: Response) {
+    const query = aiSearchSchema.parse(req.query);
+    const result = await eventsService.semanticSearch(query);
     res.json(result);
   },
 
